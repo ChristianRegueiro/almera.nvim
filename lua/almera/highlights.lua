@@ -58,12 +58,25 @@ function M.setup()
 	hl(0, "@label", { fg = c.yellow })
 	-- Adicionales útiles
 	hl(0, "@constructor", { fg = c.magenta })
+	-- Elementos HTML (nativos como <div>, <span>, etc.)
+	hl(0, "@tag", { fg = c.orange })
+	hl(0, "@tag.builtin", { fg = c.orange }) -- ← ¡Añade esto!
+
+	-- Componentes de React como <Route>, <App>, etc.
+	hl(0, "@constructor", { fg = c.blue, bold = true })
+
+	-- Atributos JSX como `className`, `href`, etc.
+	hl(0, "@tag.attribute", { fg = c.cyan })
+
+	-- Delimitadores como <, />, </>
+	hl(0, "@tag.delimiter", { fg = c.comment })
+
+	-- Definiciones y namespaces (útil si importas `React.*`)
 	hl(0, "@namespace", { fg = c.blue })
 	hl(0, "@type.definition", { fg = c.yellow, italic = true })
+
+	-- Anotaciones o decoradores (no tan usados en JSX, pero comunes en TS/Python)
 	hl(0, "@attribute", { fg = c.cyan })
-	hl(0, "@tag", { fg = c.orange })
-	hl(0, "@tag.attribute", { fg = c.cyan })
-	hl(0, "@tag.delimiter", { fg = c.comment })
 
 	-- URLs y enlaces
 	hl(0, "@string.special.url", { fg = c.blue, underline = true })
