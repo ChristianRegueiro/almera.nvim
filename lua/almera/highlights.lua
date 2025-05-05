@@ -61,7 +61,7 @@ function M.setup()
 	hl(0, "@namespace", { fg = c.blue })
 	hl(0, "@type.definition", { fg = c.yellow, italic = true })
 	hl(0, "@attribute", { fg = c.cyan })
-	hl(0, "@tag", { fg = c.blue })
+	hl(0, "@tag", { fg = c.orange })
 	hl(0, "@tag.attribute", { fg = c.cyan })
 	hl(0, "@tag.delimiter", { fg = c.comment })
 
